@@ -1,64 +1,83 @@
 #include "main.h"
 /**
+ *
  * main - entry point
  *
  * Return 0
  */
 
-void _print_values(int);
-
 void print_times_table(int n)
 
 {
 
-if (n <= 15)
+	int a, b, c, d, e, f;
 
-{
-int i, j;
 
-	for (i = 0; i <= n; i++)
-{
-	for (j = 0; j <= n; j++)
-{
 
-																				int times = i * j;
+	if (n >= 0 && n < 15)
 
-																				if (times / 100)
-																				_print_values(times);
-}
-																					else if (times / 10)
+	{
 
-{
+	for (a = 0; a <= n; a++)
 
-	if (j > 0)
-{
-	       	_putchar(' ');
+	{
+	for (b = 0; b<= n; b++)
+	{
 
-}		_print_values(times);
+	c = a * b; d = c / 100; e = (c / 10) % 10;
+	
+	f = (c % 100) % 10;
+	if (b == 0)
 
-}
-	else
+																													{
 
-{
-	if (j > 0)
-{
-		_putchar(' ');
-		_putchar(' ');
-}
-		_print_values(times);
+											_putchar('0');
+																																						}
+																													else if (c < 10)
 
-}
-if (j < n)
+																																						{
 
-{
-		_putchar(',');
+																																						_putchar(' '); _putchar(' ');
 
-		_putchar(' ');
+																																																_putchar('0' + f);
 
-}
-}
-		_putchar('\n');
-}
-}
+																																															}
+
+																																							else if (c < 100)
+																																								{
+
+																																																	_putchar(' ');
+																																																_putchar('0' + e); _putchar('0' + f);
+																																																											}
+
+																																							else
+
+																																																{
+
+																																																	_putchar('0' + d);
+
+																																																										_putchar('0' + e);
+
+																																																										_putchar('0' + f);
+
+																																																																		}
+
+																																																if (b < n)
+
+																																																					{
+
+																																																											_putchar(','); _putchar(' ');
+
+																																																															}
+
+																																																else
+
+																																																			_putchar('\n');
+
+																																																						}
+
+																	}
+
+									}
 
 }
