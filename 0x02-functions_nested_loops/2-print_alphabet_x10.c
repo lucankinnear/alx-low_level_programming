@@ -1,32 +1,31 @@
 #include "main.h"
 /**
- * main - entry point
+ *main - entry point
  *
- *Return 0
+ * Return 0
  */
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
+
 {
- 
 
-int j;
-int k = 0;
+int j = 0;
 
-while (k < 10)
+
+
+while (j < 10)
 {
-	k++;
+	char abc = 'a';
 
-	for (j = 'a'; j <= 'z'; j++)
+	while (j <= 'z')
+{
+		_putchar(abc);
 	
-	{
-		_putchar(j);
-
-	}
-
-_putchar('\n');
-
+		abc++;
 }
+}
+		_putchar('\n');
 
-return 0;
+		j++;
 
 }
