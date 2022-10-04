@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - entry point
- *
+ * Description: Draws a straught line
  * Return 0
  */
 void more_numbers(void)
