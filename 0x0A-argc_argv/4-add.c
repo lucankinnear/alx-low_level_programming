@@ -3,34 +3,56 @@
 #include <ctype.h>
 #include <string.h>
 /**
-*main - entry point
+*check_num - checks number
 *@argc - argument count
 *@argv - argumetn vector
-*
-*Return : 0
+*@str: string
+*Return: 0 or 1
 */
-int main (int argc, char *argv[])
-
+int check_num(char *str)
 {
-	int num, i, j, k;
-	int result = 0;
+	unsigned int count;
 
-	for (i = 1; i < argc; i++)
-{
-		for (j = 0; argv[i][j] != '\0'; j++)
+	count = 0;
+
+	while (count < strlen(str))
+	{
+		if (!isdigit(str[count]))
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
-			{
-				printf("%s\n", "Error");
-				return (1);
-			}
+			return (0);
 		}
+		count++;
+	}
+	return (1);
 }
-	for (k = 1; k < argc; k++)
+/**
+ * main - entry point
+ * @argc: count
+ * @argv: value
+ *
+ * Return: 0
+ */
+int main(int argc, char *argv[])
 {
-	num = atoi(argv[k]);
-	result += num;
-}
-	printf("%d\n","result");
+	int count;
+	int str_to_int;
+	int sum = 0;
+
+	count = 1;
+	while (count < argc)
+	{
+		if (check_num(argv[count]))
+		{
+			str_to_int = atoi(argv[count]);
+			sum = sum + str_to_int;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+		count++;
+	}
+	printf("%d\n", sum);
 	return (0);
 }
