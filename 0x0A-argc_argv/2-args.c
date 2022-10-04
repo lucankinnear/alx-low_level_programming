@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  * @argc: argument count
@@ -8,47 +9,17 @@
  *
  * Return: 0
  */
-int main(int agc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int i;
+	int count = 0;
 
-	for (i = 0; i < argc; i++;)
-		printf("%s\n", argv[i];
-
-				return (0);
-}#include <stdio.h>
-/**
- * main - entry point
- * @argc: argument count
- * @argv: argument vector
- *
- * Description: Prints all arguments it receives.
- *
- * Return: 0
- */
-int main(int agc, char *argv[])
-{
-int i;
-
-for (i = 0; i < argc; i++;)
-printf("%s\n", argv[i];
-
-		return (}#include <stdio.h>
-			/**
-			 * main - entry point
-			 * @argc: argument count
-			 * @argv: argument vector
-			 *
-			 * Description: Prints all arguments it receives.
-			 *
-			 * Return: 0
-			 */
-			int main(int agc, char *argv[])
-			{
-			int i;
-
-			for (i = 0; i < argc; i++;)
-			printf("%s\n", argv[i];
-
-					return (0);
+	if (argc > 0)
+	{
+		while (count < argc)
+		{
+			printf("%s\n", argv[count]);
+			count++;
 		}
+	}
+	return (0);
+}

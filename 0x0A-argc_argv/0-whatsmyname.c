@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  * @argc: argument count
@@ -8,10 +9,10 @@
  *
  * Return: 0
  */
-int __attribute__((unused)) main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void)argc;
-	print("%s\n", argv[0]);
+	printf("%s\n", argv[0]);
 
 	return (0);
 
