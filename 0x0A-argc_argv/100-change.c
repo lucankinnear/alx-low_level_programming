@@ -5,9 +5,9 @@
  * @argc: argument count
  * @argv: argument vector
  *
- * Result: 0
+ * Return: 0 if successful or 1 if Error.
  */
-int main(int argc, char *argc[])
+int main(int argc, char *argv[])
 {
 	int num, j, result = 0;
 	int coins[] = {25, 10, 5, 2, 1};
@@ -25,13 +25,12 @@ int main(int argc, char *argc[])
 	}
 	for (j = 0; j < 5 && num >= 0; j++)
 	{
-		while (num >= coins[j])
-			{
-				num -= coins[j];
-				result++;
-			}
+	while (num >= coins[j])
+	{
+		num -= coins[j];
+		result++;
+	}
 	}
 	printf("%d\n", result);
 	return (0);
 }
-			
