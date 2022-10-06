@@ -4,16 +4,16 @@
  * @s1: first string
  * @s2: second string
  * @n: count
- * 
- * Return: pointer
+ *
+ **Return: pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-    unsigned int i;
+	unsigned int i;
 	unsigned int size1 = 0;
-    unsigned int size2 = 0;
+	unsigned int size2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -51,3 +51,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 return (p);
 }
+
