@@ -10,11 +10,8 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-<<<<<<< HEAD
     unsigned int i;
-=======
-	int i;
-
+	
 	if (array && size > 0 && action)
 	{
 	for (i = 0; i < size; i++)
@@ -23,5 +20,3 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	}
 	}
 }
->>>>>>> e206a61bf43b9b9e624c823e1b1e7fafc96cb9e9
-
